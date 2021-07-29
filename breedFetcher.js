@@ -8,7 +8,7 @@ const fetchBreedDescription = (breedName, callback) => {
       Response: ${response.statusCode}
       Error: ${err}`, null);
       // passinto callback error message and null description value
-    } 
+    }
     // parse into JSON object
     const data = JSON.parse(body);
     // console.log("JSON object returned: ", data); // testing output
