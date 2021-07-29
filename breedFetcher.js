@@ -15,8 +15,8 @@ const fetchBreedDescription = (breedName, callback) => {
 
     // if no data returned by search, inform user
     if (!data[0]) {
-      // pass null to error, message to results
-      callback(null, `Sorry, no results found for ${breedName}.`);
+      // pass message to error, null description
+      callback(`Sorry, no results found for ${breedName}.`, null);
       
     // pass null to error, description to results
     } else if (data[0].description) {
@@ -25,4 +25,4 @@ const fetchBreedDescription = (breedName, callback) => {
   });
 };
 
-module.exports = fetchBreedDescription;
+module.exports = { fetchBreedDescription };
